@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/Kai8karma/matchday-copilot/actions/workflows/ci.yml/badge.svg)](https://github.com/Kai8karma/matchday-copilot/actions/workflows/ci.yml)
 
+**Live demo:** https://matchday-copilot-theta.vercel.app
+
 **Vertical: Smart Stadiums & Tournament Operations — FIFA World Cup 2026**
 
 A GenAI-powered assistant that optimizes stadium operations and the matchday
