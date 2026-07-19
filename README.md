@@ -1,6 +1,6 @@
 # ⚽ MatchDay Copilot
 
-[![CI](https://github.com/Kai8karma/matchday-copilot/actions/workflows/ci.yml/badge.svg)](https://github.com/Kai8karma/matchday-copilot/actions/workflows/ci.yml)
+[![CI](https://github.com/Kai8karma/matchday-copilot-wc26/actions/workflows/ci.yml/badge.svg)](https://github.com/Kai8karma/matchday-copilot-wc26/actions/workflows/ci.yml)
 
 **Live demo:** https://matchday-copilot-theta.vercel.app
 
@@ -21,7 +21,7 @@ Requires Python 3.10+ (tested on 3.12 and 3.14). No API keys, no database,
 no other services.
 
 ```
-git clone https://github.com/Kai8karma/matchday-copilot && cd matchday-copilot
+git clone https://github.com/Kai8karma/matchday-copilot-wc26 && cd matchday-copilot-wc26
 make install && make run
 # Windows / no make:  pip install -r requirements.txt && uvicorn app.main:app
 # open http://127.0.0.1:8000
