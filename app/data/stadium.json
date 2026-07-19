@@ -1,0 +1,39 @@
+{
+  "id": "azteca",
+  "name": "Estadio Azteca",
+  "city": "Mexico City",
+  "country": "Mexico",
+  "capacity": 83264,
+  "zones": [
+    {"id": "north", "name": "North Stand", "capacity": 20000, "adjacent": ["east", "west"]},
+    {"id": "south", "name": "South Stand", "capacity": 20000, "adjacent": ["east", "west"]},
+    {"id": "east", "name": "East Stand", "capacity": 18000, "adjacent": ["north", "south"]},
+    {"id": "west", "name": "West Stand (VIP)", "capacity": 15000, "adjacent": ["north", "south"]},
+    {"id": "concourse", "name": "Main Concourse", "capacity": 10264, "adjacent": ["north", "south", "east", "west"]}
+  ],
+  "gates": [
+    {"id": "G1", "name": "Gate 1", "zone": "north", "step_free": true},
+    {"id": "G2", "name": "Gate 2", "zone": "north", "step_free": false},
+    {"id": "G3", "name": "Gate 3", "zone": "east", "step_free": true},
+    {"id": "G4", "name": "Gate 4", "zone": "south", "step_free": false},
+    {"id": "G5", "name": "Gate 5", "zone": "south", "step_free": true},
+    {"id": "G6", "name": "Gate 6", "zone": "west", "step_free": true}
+  ],
+  "medic_stations": [
+    {"id": "M1", "name": "Medical Post North", "zone": "north"},
+    {"id": "M2", "name": "Medical Post South", "zone": "south"},
+    {"id": "M3", "name": "Central Medical Bay", "zone": "concourse"}
+  ],
+  "concessions": [
+    {"id": "C1", "name": "Tacos El Estadio", "zone": "north", "menu": "tacos, tortas, agua fresca"},
+    {"id": "C2", "name": "World Cup Grill", "zone": "east", "menu": "burgers, hot dogs, fries"},
+    {"id": "C3", "name": "Cantina Sur", "zone": "south", "menu": "quesadillas, elote, churros"},
+    {"id": "C4", "name": "Concourse Cafe", "zone": "concourse", "menu": "coffee, sandwiches, snacks"}
+  ],
+  "accessibility": {
+    "step_free_gates": ["G1", "G3", "G5", "G6"],
+    "wheelchair_seating_zones": ["west", "concourse"],
+    "sensory_room": {"zone": "concourse", "name": "Quiet Sensory Room, Concourse Level 2"},
+    "assistance_desk": {"zone": "concourse", "name": "Accessibility Assistance Desk, Gate 6"}
+  }
+}

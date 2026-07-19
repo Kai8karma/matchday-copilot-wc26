@@ -1,0 +1,47 @@
+[
+  {
+    "id": "m1",
+    "home": "Mexico",
+    "away": "Poland",
+    "kickoff": "2026-06-11T19:00:00-06:00",
+    "stage": "Group A",
+    "stadium": "azteca",
+    "gates_open": "2026-06-11T16:00:00-06:00"
+  },
+  {
+    "id": "m2",
+    "home": "Argentina",
+    "away": "South Korea",
+    "kickoff": "2026-06-14T16:00:00-06:00",
+    "stage": "Group C",
+    "stadium": "azteca",
+    "gates_open": "2026-06-14T13:00:00-06:00"
+  },
+  {
+    "id": "m3",
+    "home": "France",
+    "away": "Morocco",
+    "kickoff": "2026-06-18T19:00:00-06:00",
+    "stage": "Group F",
+    "stadium": "azteca",
+    "gates_open": "2026-06-18T16:00:00-06:00"
+  },
+  {
+    "id": "m4",
+    "home": "TBD",
+    "away": "TBD",
+    "kickoff": "2026-06-29T18:00:00-06:00",
+    "stage": "Round of 32",
+    "stadium": "azteca",
+    "gates_open": "2026-06-29T15:00:00-06:00"
+  },
+  {
+    "id": "m5",
+    "home": "Club América",
+    "away": "Cruz Azul",
+    "kickoff": "2026-12-05T19:00:00-06:00",
+    "stage": "Liga MX (legacy operations)",
+    "stadium": "azteca",
+    "gates_open": "2026-12-05T17:00:00-06:00"
+  }
+]

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MatchDay Copilot — GenAI smart stadium assistant for FIFA World Cup 2026" />
+  <title>MatchDay Copilot — Estadio Azteca</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%BD%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#chat-heading">Skip to assistant</a>
+
+  <header>
+    <h1>⚽ MatchDay Copilot</h1>
+    <p class="subtitle">Smart stadium &amp; tournament operations · Estadio Azteca · FIFA World Cup 2026</p>
+    <p id="llm-status" role="status">Checking engine…</p>
+  </header>
+
+  <main>
+    <section class="panel" aria-labelledby="chat-heading">
+      <h2 id="chat-heading">Assistant</h2>
+
+      <form id="context-form" aria-label="Your context">
+        <div class="context-grid">
+          <div>
+            <label for="role">I am a</label>
+            <select id="role" name="role">
+              <option value="fan" selected>Fan</option>
+              <option value="ops">Operations manager</option>
+              <option value="steward">Steward</option>
+            </select>
+          </div>
+          <div>
+            <label for="language">Language</label>
+            <select id="language" name="language">
+              <option value="en" selected>English</option>
+              <option value="es">Español</option>
+              <option value="fr">Français</option>
+            </select>
+          </div>
+          <div>
+            <label for="zone">My zone</label>
+            <select id="zone" name="zone">
+              <option value="">Not sure</option>
+              <option value="north">North Stand</option>
+              <option value="south">South Stand</option>
+              <option value="east">East Stand</option>
+              <option value="west">West Stand (VIP)</option>
+              <option value="concourse">Main Concourse</option>
+            </select>
+          </div>
+          <div class="checkbox-row">
+            <input type="checkbox" id="accessibility" name="accessibility" />
+            <label for="accessibility">I need step-free / accessible routes</label>
+          </div>
+        </div>
+      </form>
+
+      <div id="chat-log" role="log" aria-live="polite" aria-label="Conversation">
+        <div class="msg bot">
+          <p>Welcome! Ask me about gates, exits, food queues, the match, accessibility, venue rules — or report an incident.</p>
+        </div>
+      </div>
+
+      <form id="chat-form" aria-label="Send a message">
+        <label class="visually-hidden" for="message">Your message</label>
+        <input id="message" name="message" type="text" maxlength="500"
+               placeholder="e.g. Where is the nearest gate?" autocomplete="off" required />
+        <button type="submit">Send</button>
+      </form>
+
+      <details class="examples">
+        <summary>Example questions</summary>
+        <ul>
+          <li>Which gate should I use to get in fastest?</li>
+          <li>Someone has collapsed near my seat!</li>
+          <li>¿Dónde puedo comer algo rápido?</li>
+          <li>How is crowd density looking? (as ops)</li>
+          <li>Is there a step-free exit from the north stand?</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="panel" aria-labelledby="ops-heading">
+      <h2 id="ops-heading">Live operations</h2>
+
+      <h3>Zone occupancy</h3>
+      <ul id="zones" class="zone-list" aria-live="polite"></ul>
+
+      <h3>Gate loads</h3>
+      <table>
+        <caption class="visually-hidden">Current load per stadium gate</caption>
+        <thead>
+          <tr><th scope="col">Gate</th><th scope="col">Zone</th><th scope="col">Step-free</th><th scope="col">Load</th></tr>
+        </thead>
+        <tbody id="gates"></tbody>
+      </table>
+
+      <h3 id="incident-heading">Report an incident</h3>
+      <form id="incident-form" aria-labelledby="incident-heading">
+        <label for="incident-zone">Zone</label>
+        <select id="incident-zone" required>
+          <option value="north">North Stand</option>
+          <option value="south">South Stand</option>
+          <option value="east">East Stand</option>
+          <option value="west">West Stand (VIP)</option>
+          <option value="concourse">Main Concourse</option>
+        </select>
+        <label for="incident-desc">What happened?</label>
+        <input id="incident-desc" type="text" maxlength="500" minlength="3" required
+               placeholder="e.g. unattended bag by gate 3" />
+        <button type="submit">Report</button>
+      </form>
+      <ul id="incidents" class="incident-list" aria-live="polite"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Demo telemetry is simulated. In an emergency, always follow steward instructions.</p>
+  </footer>
+
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
